@@ -71,6 +71,23 @@ const AddGroup = () => {
         </Form>
         <div>
           <Form>
+            <Typography
+              fontWeight={600}
+              fontSize="18px"
+              color={colors.grayText}
+              marginBottom="20px"
+            >
+              Group Information
+            </Typography>
+            <StyledTextField label="Target" size="small" margin="normal" sx={{ width: "98%" }} />
+            <StyledTextField
+              label="Should display"
+              size="small"
+              margin="normal"
+              sx={{ width: "98%" }}
+            />
+          </Form>
+          <Form style={{ marginTop: "30px" }}>
             <Header>
               <Typography
                 fontWeight={600}
@@ -90,23 +107,6 @@ const AddGroup = () => {
                 <img key={idx} src={img} />
               ))}
             </ImagesContainer>
-          </Form>
-          <Form style={{ marginTop: "30px" }}>
-            <Typography
-              fontWeight={600}
-              fontSize="18px"
-              color={colors.grayText}
-              marginBottom="20px"
-            >
-              Group Information
-            </Typography>
-            <StyledTextField label="Target" size="small" margin="normal" sx={{ width: "98%" }} />
-            <StyledTextField
-              label="Should display"
-              size="small"
-              margin="normal"
-              sx={{ width: "98%" }}
-            />
           </Form>
         </div>
       </AddGroupGrid>

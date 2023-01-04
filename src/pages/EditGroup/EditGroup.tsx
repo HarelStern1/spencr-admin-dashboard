@@ -38,7 +38,13 @@ const EditGroup: FC = () => {
           <Typography fontWeight={600} fontSize="18px" color={colors.grayText} marginBottom="20px">
             Product Information
           </Typography>
-          <StyledTextField label="Name" size="small" margin="normal" sx={{ marginRight: "20px" }} />
+          <StyledTextField
+            label="Name"
+            value="iPhone 14 Pro"
+            size="small"
+            margin="normal"
+            sx={{ marginRight: "20px" }}
+          />
           <StyledTextField label="Category" size="small" margin="normal" />
           <StyledTextField
             label="Brand"
@@ -71,6 +77,23 @@ const EditGroup: FC = () => {
         </Form>
         <div>
           <Form>
+            <Typography
+              fontWeight={600}
+              fontSize="18px"
+              color={colors.grayText}
+              marginBottom="20px"
+            >
+              Group Information
+            </Typography>
+            <StyledTextField label="Target" size="small" margin="normal" sx={{ width: "98%" }} />
+            <StyledTextField
+              label="Should display"
+              size="small"
+              margin="normal"
+              sx={{ width: "98%" }}
+            />
+          </Form>
+          <Form style={{ marginTop: "30px" }}>
             <Header>
               <Typography
                 fontWeight={600}
@@ -90,23 +113,6 @@ const EditGroup: FC = () => {
                 <img key={idx} src={img} />
               ))}
             </ImagesContainer>
-          </Form>
-          <Form style={{ marginTop: "30px" }}>
-            <Typography
-              fontWeight={600}
-              fontSize="18px"
-              color={colors.grayText}
-              marginBottom="20px"
-            >
-              Group Information
-            </Typography>
-            <StyledTextField label="Target" size="small" margin="normal" sx={{ width: "98%" }} />
-            <StyledTextField
-              label="Should display"
-              size="small"
-              margin="normal"
-              sx={{ width: "98%" }}
-            />
           </Form>
         </div>
       </AddGroupGrid>
