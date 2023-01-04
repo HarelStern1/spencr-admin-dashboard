@@ -18,7 +18,7 @@ export const media = {
 
 export const pathToTitleMap = {
   "/": "Analysis",
-  "/products": "Products",
-  "/add-product": "Add Product",
+  "/groups": "Groups",
+  "/add-group": "Add Group",
   "/sellers": "Sellers",
 };

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "../../utils/constants";
 
 export const CardWrapper = styled.div`
   display: flex;
@@ -23,4 +24,15 @@ export const BottomFlex = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+`;
+
+export const ButtonsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  ${media.mobile} {
+    flex-direction: column;
+  }
 `;

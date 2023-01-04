@@ -8,7 +8,7 @@ export const Header = styled.div`
   margin-bottom: 50px;
 `;
 
-export const ProductsGrid = styled.div`
+export const GroupsGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 40px;

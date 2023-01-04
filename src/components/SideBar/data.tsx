@@ -5,18 +5,18 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 
 export const links = [
   {
-    text: "Analysis",
+    text: "Analytics",
     to: "/",
     icon: <DashboardIcon fontSize="medium" sx={{ color: "#fff" }} />,
   },
   {
-    text: "Products",
-    to: "/products",
+    text: "Groups",
+    to: "/groups",
     icon: <InventoryOutlinedIcon fontSize="medium" sx={{ color: "#fff" }} />,
   },
   {
-    text: "Add Product",
-    to: "/add-product",
+    text: "Add Group",
+    to: "/add-group",
     icon: <AddIcon fontSize="medium" sx={{ color: "#fff" }} />,
   },
   {

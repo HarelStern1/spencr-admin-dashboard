@@ -9,7 +9,7 @@ export const Header = styled.div`
   margin-bottom: 50px;
 `;
 
-export const AddProductGrid = styled.div`
+export const AddGroupGrid = styled.div`
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 30px;
@@ -19,7 +19,7 @@ export const AddProductGrid = styled.div`
   }
 `;
 
-export const Form = styled.div`
+export const Form = styled.div<{ short?: boolean }>`
   padding: 2rem 2rem 2.75rem 2rem;
   background-color: #fff;
   border-radius: 1rem;
@@ -39,8 +39,8 @@ export const ImagesContainer = styled.div`
   gap: 20px;
 
   > img {
-    width: 180px;
-    height: 180px;
+    width: 120px;
+    height: 120px;
     border-radius: 0.75rem;
   }
 `;
