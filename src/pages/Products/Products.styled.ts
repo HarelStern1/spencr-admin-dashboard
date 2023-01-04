@@ -13,7 +13,7 @@ export const ProductsGrid = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 40px;
 
-  ${media.tablet} {
+  ${media.desktop} {
     grid-template-columns: 1fr 1fr 1fr;
   }
   ${media.burger} {

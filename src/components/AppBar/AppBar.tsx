@@ -12,7 +12,7 @@ const AppBar = () => {
   const [bgColor, setBgColor] = useState<"transparent" | "white">("transparent");
   const { isOpen, setIsOpen } = useLayoutContext();
   const location = useLocation();
-  const isDesktop = useMediaQuery(1450);
+  const isTablet = useMediaQuery(1200);
 
   const toggleSideBar = () => {
     setIsOpen((prev: boolean) => !prev);
@@ -37,14 +37,14 @@ const AppBar = () => {
         <Typography color={colors.grayText} fontWeight={700}>
           {pathToTitleMap[location.pathname as keyof typeof pathToTitleMap]}
         </Typography>
-        {!isDesktop && (
+        {!isTablet && (
           <IconButton onClick={toggleSideBar}>
             {isOpen ? <MenuOpenIcon /> : <MenuIcon />}
           </IconButton>
         )}
       </Left>
       <Right>
-        {isDesktop && (
+        {isTablet && (
           <IconButton onClick={toggleSideBar}>
             {isOpen ? <MenuOpenIcon /> : <MenuIcon />}
           </IconButton>

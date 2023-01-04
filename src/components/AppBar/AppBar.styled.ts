@@ -31,7 +31,7 @@ export const AppBarWrapper = styled.div<{ isOpen: boolean; bgColor: string }>`
     }
   }}
 
-  ${media.desktop} {
+  ${media.tablet} {
     width: calc(100% - 3.5rem);
   }
 

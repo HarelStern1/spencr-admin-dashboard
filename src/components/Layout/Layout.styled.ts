@@ -9,7 +9,7 @@ export const LayoutWrapper = styled.div<{ isOpen: boolean }>`
       : `${constants.closedSideBarWidth + 32}px auto`};
   transition: all 0.3s ease;
 
-  ${media.desktop} {
+  ${media.tablet} {
     grid-template-columns: 100%;
   }
 `;

@@ -17,14 +17,14 @@ export const AddProductGrid = styled.div`
   ${media.tablet} {
     grid-template-columns: 1fr;
   }
+`;
 
-  > div {
-    padding: 2rem 2rem 2.75rem 2rem;
-    background-color: #fff;
-    border-radius: 1rem;
-    box-shadow: rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem,
-      rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0;
-  }
+export const Form = styled.div`
+  padding: 2rem 2rem 2.75rem 2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem,
+    rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0;
 `;
 
 export const HiddenInput = styled.input`

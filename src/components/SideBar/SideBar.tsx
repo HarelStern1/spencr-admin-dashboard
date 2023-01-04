@@ -4,9 +4,18 @@ import DiamondIcon from "@mui/icons-material/Diamond";
 import SideBarTab from "../SideBarTab/SideBarTab";
 import { links } from "./data";
 import { useLayoutContext } from "../../context/LayoutContext";
+import useMediaQuery from "../../hooks/useMediaQuery";
+import { useEffect } from "react";
 
 const SideBar = () => {
-  const { isOpen } = useLayoutContext();
+  const { isOpen, setIsOpen } = useLayoutContext();
+  const isTablet = useMediaQuery(1200);
+
+  useEffect(() => {
+    if (isTablet) {
+      setIsOpen(false);
+    }
+  }, [isTablet]);
 
   return (
     <SideBarWrapper isOpen={isOpen}>

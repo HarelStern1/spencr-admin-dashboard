@@ -17,7 +17,7 @@ export const SideBarWrapper = styled.nav<{ isOpen: boolean }>`
   overflow-y: auto;
   z-index: 200;
 
-  ${media.desktop} {
+  ${media.tablet} {
     left: ${({ isOpen }) => (isOpen ? "0" : "-300px")};
   }
 `;

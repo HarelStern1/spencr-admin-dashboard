@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { colors } from "../../utils/constants";
 import {
   AddProductGrid,
+  Form,
   Header,
   HiddenInput,
   ImagesContainer,
@@ -34,41 +35,63 @@ const AddProduct = () => {
 
       <AddProductGrid>
         <div>
-          <Typography fontWeight={600} fontSize="18px" color={colors.grayText} marginBottom="20px">
-            Product Information
-          </Typography>
-          <StyledTextField label="Name" size="small" margin="normal" sx={{ marginRight: "20px" }} />
-          <StyledTextField label="Category" size="small" margin="normal" />
-          <StyledTextField
-            label="Brand"
-            size="small"
-            margin="normal"
-            sx={{ marginRight: "20px" }}
-          />
-          <StyledTextField label="Seller" size="small" margin="normal" />
-          <StyledTextField label="In stock" size="small" margin="normal" sx={{ width: "98%" }} />
-          <StyledTextField
-            label="Original price"
-            size="small"
-            margin="normal"
-            sx={{ width: "98%" }}
-          />
-          <StyledTextField
-            label="Price after discount"
-            size="small"
-            margin="normal"
-            sx={{ width: "98%" }}
-          />
-          <TextField
-            label="Description"
-            size="small"
-            margin="normal"
-            sx={{ width: "98%" }}
-            multiline
-            minRows={4}
-          />
+          <Form>
+            <Typography
+              fontWeight={600}
+              fontSize="18px"
+              color={colors.grayText}
+              marginBottom="20px"
+            >
+              Product Information
+            </Typography>
+            <StyledTextField
+              label="Name"
+              size="small"
+              margin="normal"
+              sx={{ marginRight: "20px" }}
+            />
+            <StyledTextField label="Category" size="small" margin="normal" />
+            <StyledTextField
+              label="Brand"
+              size="small"
+              margin="normal"
+              sx={{ marginRight: "20px" }}
+            />
+            <StyledTextField label="Seller" size="small" margin="normal" />
+            <StyledTextField label="In stock" size="small" margin="normal" sx={{ width: "98%" }} />
+            <StyledTextField
+              label="Original price"
+              size="small"
+              margin="normal"
+              sx={{ width: "98%" }}
+            />
+            <StyledTextField
+              label="Price after discount"
+              size="small"
+              margin="normal"
+              sx={{ width: "98%" }}
+            />
+            <TextField
+              label="Description"
+              size="small"
+              margin="normal"
+              sx={{ width: "98%" }}
+              multiline
+              minRows={4}
+            />
+          </Form>
+          <Form style={{ marginTop: "30px" }}>
+            <Typography
+              fontWeight={600}
+              fontSize="18px"
+              color={colors.grayText}
+              marginBottom="20px"
+            >
+              Group Information
+            </Typography>
+          </Form>
         </div>
-        <div>
+        <Form>
           <Header>
             <Typography
               fontWeight={600}
@@ -88,7 +111,7 @@ const AddProduct = () => {
               <img key={idx} src={img} />
             ))}
           </ImagesContainer>
-        </div>
+        </Form>
       </AddProductGrid>
     </div>
   );
