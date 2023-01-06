@@ -3,11 +3,14 @@ import { useRef, useState } from "react";
 import { colors } from "../../utils/constants";
 import {
   AddGroupGrid,
+  FieldsWrapper,
   Form,
   Header,
   HiddenInput,
+  ImagePlaceholder,
   ImagesContainer,
-  StyledTextField,
+  ImagesHeader,
+  TextFieldContainer,
 } from "./AddGroup.styled";
 
 const AddGroup = () => {
@@ -32,83 +35,70 @@ const AddGroup = () => {
         </Typography>
         <Button variant="contained">Publish</Button>
       </Header>
-
       <AddGroupGrid>
-        <Form>
+        <Form area="product" fit>
           <Typography fontWeight={600} fontSize="18px" color={colors.grayText} marginBottom="20px">
             Product Information
           </Typography>
-          <StyledTextField label="Name" size="small" margin="normal" sx={{ marginRight: "20px" }} />
-          <StyledTextField label="Category" size="small" margin="normal" />
-          <StyledTextField
-            label="Brand"
-            size="small"
-            margin="normal"
-            sx={{ marginRight: "20px" }}
-          />
-          <StyledTextField label="Seller" size="small" margin="normal" />
-          <StyledTextField label="In stock" size="small" margin="normal" sx={{ width: "98%" }} />
-          <StyledTextField
-            label="Original price"
-            size="small"
-            margin="normal"
-            sx={{ width: "98%" }}
-          />
-          <StyledTextField
-            label="Price after discount"
-            size="small"
-            margin="normal"
-            sx={{ width: "98%" }}
-          />
+          <FieldsWrapper>
+            <TextFieldContainer>
+              <TextField label="Name" size="small" margin="normal" fullWidth />
+            </TextFieldContainer>
+            <TextFieldContainer>
+              <TextField label="Category" size="small" margin="normal" fullWidth />
+            </TextFieldContainer>
+          </FieldsWrapper>
+          <FieldsWrapper>
+            <TextFieldContainer>
+              <TextField label="Brand" size="small" margin="normal" fullWidth />
+            </TextFieldContainer>
+            <TextFieldContainer>
+              <TextField label="Seller" size="small" margin="normal" fullWidth />
+            </TextFieldContainer>
+          </FieldsWrapper>
+          <TextField label="In stock" size="small" margin="normal" fullWidth />
+          <TextField label="Original price" size="small" margin="normal" fullWidth />
+          <TextField label="Price after discount" size="small" margin="normal" fullWidth />
           <TextField
             label="Description"
             size="small"
             margin="normal"
-            sx={{ width: "98%" }}
+            fullWidth
             multiline
             minRows={4}
           />
         </Form>
-        <div>
-          <Form>
-            <Typography
-              fontWeight={600}
-              fontSize="18px"
-              color={colors.grayText}
-              marginBottom="20px"
-            >
-              Group Information
+        <Form area="group">
+          <Typography fontWeight={600} fontSize="18px" color={colors.grayText} marginBottom="20px">
+            Group Information
+          </Typography>
+          <TextField label="Target" size="small" margin="normal" fullWidth />
+          <TextField label="Should display" size="small" margin="normal" fullWidth />
+        </Form>
+        <Form area="images">
+          <ImagesHeader>
+            <Typography fontWeight={600} fontSize="18px" color={colors.grayText}>
+              Product Images
             </Typography>
-            <StyledTextField label="Target" size="small" margin="normal" sx={{ width: "98%" }} />
-            <StyledTextField
-              label="Should display"
-              size="small"
-              margin="normal"
-              sx={{ width: "98%" }}
-            />
-          </Form>
-          <Form style={{ marginTop: "30px" }}>
-            <Header>
-              <Typography
-                fontWeight={600}
-                fontSize="18px"
-                color={colors.grayText}
-                marginBottom="20px"
-              >
-                Product Images
-              </Typography>
-              <HiddenInput type="file" ref={hiddenFileInput} onChange={onImageChange} />
-              <Button variant="outlined" onClick={handleUplaodImage}>
-                Upload Image
-              </Button>
-            </Header>
-            <ImagesContainer>
-              {images.map((img, idx) => (
-                <img key={idx} src={img} />
-              ))}
-            </ImagesContainer>
-          </Form>
-        </div>
+            <HiddenInput type="file" ref={hiddenFileInput} onChange={onImageChange} />
+            <Button variant="outlined" onClick={handleUplaodImage}>
+              Upload Image
+            </Button>
+          </ImagesHeader>
+          <ImagesContainer>
+            {images.length === 0 ? (
+              <ImagePlaceholder>
+                <Typography>Images will be shown here</Typography>
+              </ImagePlaceholder>
+            ) : (
+              <div>
+                {images.map((img, idx) => (
+                  <img key={idx} src={img} />
+                ))}
+              </div>
+            )}
+          </ImagesContainer>
+        </Form>
       </AddGroupGrid>
     </div>
   );
