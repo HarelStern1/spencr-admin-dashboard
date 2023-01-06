@@ -60,6 +60,10 @@ export const ImagesContainer = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
 
+    ${media.small} {
+      grid-template-columns: 1fr;
+    }
+
     > img {
       width: 120px;
       height: 120px;
@@ -84,4 +88,5 @@ export const ImagePlaceholder = styled.figure`
   border: 2px dotted gray;
   padding: 2rem 2.5rem;
   border-radius: 0.25rem;
+  text-align: center;
 `;

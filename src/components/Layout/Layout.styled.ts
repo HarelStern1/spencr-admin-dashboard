@@ -19,6 +19,10 @@ export const CustomBox = styled.main<{ isOpen: boolean }>`
   transition: all 0.3s ease;
   padding: 50px 28px;
   margin-right: 1rem;
+
+  ${media.mobile} {
+    margin-right: 0;
+  }
 `;
 
 export const SideBarContainer = styled.div`

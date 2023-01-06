@@ -11,7 +11,6 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import Modal from "../Modal/Modal";
 import { useNavigate } from "react-router-dom";
-import { colors } from "../../utils/constants";
 
 const GroupCard: FC = () => {
   const [showModal, setShowModal] = useState(false);
