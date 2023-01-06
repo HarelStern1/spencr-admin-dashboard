@@ -11,6 +11,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import Modal from "../Modal/Modal";
 import { useNavigate } from "react-router-dom";
+import { colors } from "../../utils/constants";
 
 const GroupCard: FC = () => {
   const [showModal, setShowModal] = useState(false);
@@ -54,7 +55,7 @@ const GroupCard: FC = () => {
       <Modal showModal={showModal} closeModal={closeModal}>
         <Typography marginBottom="20px">Are you sure you want to delete this group?</Typography>
         <ButtonsContainer>
-          <Button variant="outlined" onClick={closeModal}>
+          <Button color="info" variant="outlined" onClick={closeModal}>
             No, keep
           </Button>
           <Button variant="outlined" color="error">

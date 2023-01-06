@@ -13,7 +13,7 @@ export const media = {
   mobile: "@media (max-width: 767px)",
   burger: "@media (max-width: 1000px)",
   tablet: "@media (max-width: 1200px)",
-  desktop: "@media (max-width: 1450px)",
+  desktop: "@media (max-width: 1400px)",
 };
 
 export const pathToTitleMap = {

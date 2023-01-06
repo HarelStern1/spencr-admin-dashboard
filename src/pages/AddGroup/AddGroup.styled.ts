@@ -81,7 +81,7 @@ export const FieldsWrapper = styled.div`
 
 export const ImagePlaceholder = styled.figure`
   margin: 30px 0 0;
-  border: 2px dotted ${colors.grayText};
+  border: 2px dotted gray;
   padding: 2rem 2.5rem;
   border-radius: 0.25rem;
 `;
